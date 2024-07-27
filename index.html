@@ -10,145 +10,114 @@
     <script src="js/java.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous">
     </script>
+    <script>
+        (function(d) {
+            var config = {
+                    kitId: 'cho1mkp',
+                    scriptTimeout: 3000,
+                    async: true
+                },
+                h = d.documentElement,
+                t = setTimeout(function() {
+                    h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+                }, config.scriptTimeout),
+                tk = d.createElement("script"),
+                f = false,
+                s = d.getElementsByTagName("script")[0],
+                a;
+            h.className += " wf-loading";
+            tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+            tk.async = true;
+            tk.onload = tk.onreadystatechange = function() {
+                a = this.readyState;
+                if (f || a && a != "complete" && a != "loaded") return;
+                f = true;
+                clearTimeout(t);
+                try {
+                    Typekit.load(config)
+                } catch (e) {}
+            };
+            s.parentNode.insertBefore(tk, s)
+        })(document);
+
+    </script>
 </head>
 
 <body>
     <div class="header">
-        <h1 class="maintitle">
+        <h1 class="maintitle" id="box">
             자국 네트워크
         </h1>
+        <script src="js/scrollscript.js"></script>
     </div>
-    <div class="contents">
-        <div class="left">
+    <div class="dscr-container">
+        <div class="dsc" id="dsc">
             <h3 class="dscrkr">
-                <span class="rotate">자</span><span class="rotate">국</span> <span class="rotate">네</span><span class="rotate">트</span><span class="rotate">워</span><span class="rotate">크</span>는 작업물들을, 특히 전시와 행사를 눈여겨보며 기록한
-                <a href="http://kangminje.com">
-                    <span id="kangminje1">
+                자국 네트워크는
 
-                        <span class="rotate">강</span><span class="rotate">민</span><span class="rotate">제</span>
-
-                        <div class="weblink1">
-                            <span class="kangminjedotcom">&#x0290D kangminje.com</span>
-                        </div>
-
-                    </span></a>의 개인적인 아카이브 웹사이트이다. 전시(행사)의 콘텐츠에만 집중하지는 않는다. 전시 자체를 프로젝트로 바라보며 모든 부산물들(포스터, 홍보물, 인쇄물, DP, 공간처럼)을 대상으로 다루고자 한다. 이 감상과 생각들은 본 웹 아카이브에 자국으로 남고, 자국들은 연결되어 네트워크를 구성한다.
+                <a href="http://kangminje.com"><span id="kangminje1"><span>강민제</span>
+                        <div class="weblink1"><span class="kangminjedotcom1">&#x0290D kangminje.com</span></div>
+                    </span></a>의 개인적인 아카이브로, 이미지들을 큰 구분 없이 기록한 공간이다. 전시된(혹은 전시되지 않은) 예술 작업, 영화, 평면과 입체 조형, 광고 이미지 등 매체의 구분 없이 ‘이미지’라고 불리는 모든 것을 이 공간에 기록할 예정이다.
+                <p class="indent">
+                    리뷰는 아니다. 타인을 위한 정리도 아니며, 나 스스로의 양분을 차곡차곡 정리하기 위함이다. 단순한 감상이나 분석이 될 수도 있고, 영향을 받은 새로운 이미지로 글을 대체할 수도 있다. 대상은 모든 부산물들(포스터, 홍보물, 인쇄물, DP, 공간, 재료 등)을 다루고자 한다. 작업물 자체를 매체의 특성을 지운 후 그저 이미지로 보고 싶은 것이 그 이유다.
+                </p>
+                <p class="indent">
+                    이 감상과 생각들은 본 웹 아카이브에 자국으로 남고, 자국들은 연결되어 네트워크를 구성할 것이다. 자국 네트워크가 미래의 나에게 변화를 주기를 기대한다.
+                </p>
             </h3>
-
             <h3 class="dscren">
-                <span class="rotate">자</span><span class="rotate">국</span> <span class="rotate">네</span><span class="rotate">트</span><span class="rotate">워</span><span class="rotate">크</span> is
+                JAGOOK NETWORK is a personal archive by
 
-                <a href="http://kangminje.com">
-                    <span id="kangminje2"><span class="rotate">k</span><span class="rotate">a</span><span class="rotate">n</span><span class="rotate">g</span><span class="rotate">m</span><span class="rotate">i</span><span class="rotate">n</span><span class="rotate">j</span><span class="rotate">e</span>
+                <a href="http://kangminje.com"><span id="kangminje2"><span>Kang Minje</span>
+                        <div class="weblink2"><span class="kangminjedotcom2">&#x0290D kangminje.com</span></div>
+                    </span></a>, a space where images are recorded without strict categorization. It documents everything referred to as 'images,' including artworks, movies, sculptures, advertising images, and more, regardless of the medium.
 
-                        <div class="weblink2">
-                            <span class="kangminjedotcom">&#x0290D kangminje.com</span>
-                        </div>
+                <p class="indent">This is not a review or for others; it's for compiling nourishment for myself. It may be appreciation, analysis, or a new image inspired by the original. Subjects include all byproducts (posters, promotional materials, prints, displays, spaces, materials, etc.). The goal is to view the work as an image, removing the medium's characteristics.</p>
 
-                    </span></a>
-                's personal archive website that records visual works, especially exhibitions and events. It doesn't just focus on the contents of the exhibition(event). It looks at the exhibition itself as a project and going to deals with every by-products(such as posters, promotional materials, prints, DP, and space) as objects to consider. These impressions and thoughts remain in this web archive as 자국, and they will be connected to form a 네트워크.
+                <p class="indent">These reflections will remain as marks in this web archive, forming a network. I am excited to see what changes the JAGOOK NETWORK will bring to my future self.
+                </p>
             </h3>
         </div>
-        <div class="centerdivider"></div>
-        <div class="right">
-
-            <canvas id="canvas" class="canvas"></canvas>
-            
-            <a>
-                <div id="div1" class="box">
-                        <p class="text">&#171;이미지들, The Images&#187;<br><br>@하이트컬렉션, 2023</p>
-                </div>
-            </a>
-            
-            <a>
-                <div id="div2" class="box">
-                        <p class="text">&#171;이미지들, The Images&#187;<br><br>@하이트컬렉션, 2023</p>
-                </div>
-            </a>
-            
-            <a>
-                <div id="div3" class="box">
-                        <p class="text">&#171;이미지들, The Images&#187;<br><br>@하이트컬렉션, 2023</p>
-                </div>
-            </a>
-            
-            <a>
-                <div id="div4" class="box">
-                    <p class="text">&#171;이미지들, The Images&#187;<br><br>@하이트컬렉션, 2023</p>
-                </div>
-            </a>
-            
-        </div>
-
-        <script>
-            divs = document.getElementsByTagName("div");
-            for (div of divs) div.onmousedown = onMouseDown;
-
-            document.onmousemove = onMouseMove;
-            document.onmouseup = onMouseUp;
-
-            canvas.width = window.innerWidth - 20;
-            canvas.height = window.innerHeight - 20;
-
-            var the_moving_div = '';
-            var the_last_mouse_position = {
-                x: 0,
-                y: 0
-            };
-
-            drawConnectors();
-
-            function onMouseDown(e) {
-                e.preventDefault();
-                the_moving_div = e.target.id; // remember which div has been selected 
-                the_last_mouse_position.x = e.clientX; // remember where the mouse was when it was clicked
-                the_last_mouse_position.y = e.clientY;
-                //                e.target.style.border = "2px solid black"; // highlight the border of the div
-
-                var divs = document.getElementsByTagName("div");
-                e.target.style.zIndex = divs.length; // put this div  on top
-                var i = 1;
-                for (div of divs)
-                    if (div.id != the_moving_div) div.style.zIndex = i++; // put all other divs behind the selected one
-            }
-
-            function onMouseMove(e) {
-                e.preventDefault();
-                if (the_moving_div == "") return;
-                var d = document.getElementById(the_moving_div);
-                d.style.left = d.offsetLeft + e.clientX - the_last_mouse_position.x + "px"; // move the div by however much the mouse moved
-                d.style.top = d.offsetTop + e.clientY - the_last_mouse_position.y + "px";
-                the_last_mouse_position.x = e.clientX; // remember where the mouse is now
-                the_last_mouse_position.y = e.clientY;
-                drawConnectors();
-            }
-
-            function onMouseUp(e) {
-                e.preventDefault();
-                if (the_moving_div == "") return;
-                //                document.getElementById(the_moving_div).style.border = "none"; // hide the border again
-                the_moving_div = "";
-            }
-
-            //            function drawConnectors() {
-            //                var canvas = document.getElementById('canvas');
-            //                var ctx = canvas.getContext('2d');
-            //                ctx.clearRect(0, 0, canvas.width, canvas.height);
-            //                ctx.beginPath();
-            //                ctx.strokeStyle = "black";
-            //                ctx.lineWidth = 1;
-            //                for (div1 of divs)
-            //                    for (div2 of divs) {
-            //                        if (div1 == div2) continue;
-            //                        ctx.moveTo(div1.offsetLeft + div1.clientWidth / 2, div1.offsetTop + div1.clientHeight / 2);
-            //                        ctx.bezierCurveTo(div1.offsetLeft, div1.offsetTop,
-            //                            div2.offsetLeft, div2.offsetTop,
-            //                            div2.offsetLeft + div2.clientWidth / 2, div2.offsetTop + div2.clientHeight / 2);
-            //                        ctx.stroke();
-            //                    }
-            //            }
-
-        </script>
+        <span class="date">Sep 2023<br>강민제</span>
     </div>
+
+    <div class="list">
+        <a href="page1.html">«이미지들 The Images», 2023</a>
+        <a href="page2.html">제 4회 서울도시건축비엔날레 «땅의 도시 땅의 건축»</a>
+        <a href="page3.html">MMCA 현대차 시리즈 2023: 정연두 «백년 여행기»</a>
+        <a href="page4.html">«김구림» Kim Kulim</a>
+        <a href="page5.html">«구본창의 향해»</a>
+        <a href="page6.html">«YOSHIDA YUNI ; Alchemy +»</a>
+        <a href="page7.html">«running through»</a>
+        <a href="page8.html">«여자는 남자를 남자는 여자를 서로 신성함으로 이끈다»</a>
+        <a href="page9.html">«서울 : 서울, 어디에나 있고 아무데도 없는 강홍구의 서울»</a>
+        <a href="page10.html">«사물은 어떤 꿈을 꾸는가»</a>
+        <!-- 빈 제목 링크 -->
+        <a href="page11.html">&nbsp;</a>
+        <a href="page12.html">&nbsp;</a>
+        <a href="page13.html">&nbsp;</a>
+        <a href="page14.html">&nbsp;</a>
+        <a href="page15.html">&nbsp;</a>
+        <a href="page16.html">&nbsp;</a>
+        <a href="page17.html">&nbsp;</a>
+        <a href="page18.html">&nbsp;</a>
+        <a href="page19.html">&nbsp;</a>
+        <a href="page20.html">&nbsp;</a>
+        <a href="page21.html">&nbsp;</a>
+        <a href="page22.html">&nbsp;</a>
+        <a href="page23.html">&nbsp;</a>
+<!--
+        <a href="page24.html">&nbsp;</a>
+        <a href="page25.html">&nbsp;</a>
+        <a href="page26.html">&nbsp;</a>
+        <a href="page27.html">&nbsp;</a>
+        <a href="page28.html">&nbsp;</a>
+        <a href="page29.html">&nbsp;</a>
+        <a href="page30.html">&nbsp;</a>
+-->
+        
+    </div>
+
 </body>
 
 </html>
