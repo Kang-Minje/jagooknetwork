@@ -36,58 +36,61 @@
 body {
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: flex-start;
     width: 100%;
     background-color: rgba(160, 255, 40, 1);
+    margin: 0; /* 기본 마진 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+}
+
+#wrap {
+    display: flex;
+    flex-direction: column; /* 세로 방향 정렬 */
+    align-items: center; /* 자식 요소들을 중앙 정렬 */
+    width: 100%;
 }
 
 .header {
+    position: fixed;
     display: flex;
     justify-content: center;
-    align-content: center;
-    position: fixed;
+    align-items: center;
     width: 100%;
-    height: 110px;
-    z-index: 999;
     background-color: rgba(160, 255, 40, 1);
+    transition: 0.3s;
+    z-index: 999;
 }
 
 .maintitle {
-    position: relative;
     text-align: center;
-    top: 20px;
     width: 81.4vw;
-    height: 30px;
     font-family: "sandoll-jebi2", sans-serif;
     font-weight: 700;
     font-size: 17px;
-    padding: 30px;
-    margin: auto 0;
+    padding: 50px 30px;
+    margin: auto;
     border-bottom: 1px solid black;
 }
 
+
 .dscr-container {
-    position: absolute;
     display: flex;
-    width: 100%;
-    z-index: 0;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    width: 100%;
+    padding-top: 115px;
 }
 
 .dsc {
-    position: absolute;
-    width: 100%;
-    max-width: 85vw;
-    top: -470px;
-    padding: 600px 0 20px 20px;
+    width: 85vw;
+    margin-top: 0px;
     margin-bottom: 50px;
-    z-index: 1;
     display: flex;
     justify-content: space-between; /* 수평 정렬 및 양끝 맞춤 */
     background-color: white;
     border: 1px solid black;
     box-sizing: border-box;
+    padding: 20px 20px 20px 20px;
 }
 
 .dsc p {
@@ -99,254 +102,94 @@ body {
     text-align: left; /* 텍스트를 가운데 정렬 */
 }
 
-
-.right {
-    position: absolute;
-    width: 100%;
-    height: calc(100% - 10px);
-    right: -10px;
-}
-
-.dscrkr,
-.dscren {
-    position: relative;
-    width: 400px;
-    font-family: "sandoll-jebi2", sans-serif;
-    font-weight: 500;
-    font-size: 17px;
-}
-
-.dscrkr {
-    line-height: 27px;
-}
-
-.dscren {
-    line-height: 24px;
-}
-
-.rotate {
-    display: inline-block;
-    transform-origin: center center;
-}
-
-#kangminje1,
-#kangminje2 {
-    display: inline-block;
-    transition: background-color 0.3s;
-    position: relative;
-}
-
-#kangminje1::after,
-#kangminje2::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 4px;
-    width: 100%;
-    height: 1.5px;
-    background-color: black;
-}
-
-.weblink1,
-.weblink2 {
-    display: none;
-    position: absolute;
-    width: 160px;
-    height: 30px;
-    background-color: rgba(160, 255, 40, 1);
-    border: 1px solid black;
-    z-index: 999;
-}
-
-#kangminje1:hover > .weblink1,
-#kangminje2:hover > .weblink2 {
-    display: block;
-}
-
-.kangminjedotcom1,
-.kangminjedotcom2 {
-    position: absolute;
-    font-family: "sandoll-jebi2", sans-serif;
-    font-weight: 500;
-    font-size: 17px;
-    left: 15px;
-    top: 2px;
-    color: black;
-    text-decoration: none;
-}
-
-a {
-    color: black;
-    margin: 0;
-}
-
-a:visited {
-    color: black;
-}
-
-#drawer {
-    position: relative;
-    width: calc(50% + 70px);
-    height: calc(100% + 25px);
-    left: calc(50% - 50px);
-    top: -15px;
-    background-color: rgba(160, 255, 40, 1);
-    border-left: 1px solid black;
-}
-
-#mydiv_01,
-#mydiv_02,
-#mydiv_03 {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 100px;
-}
-
-.mydiv:active {
-    left: 0;
-    top: 0;
-}
-
-.listdivider {
-    position: absolute;
-    border-top: 1px solid black;
-    background-color: rgba(160, 255, 40, 1);
-    width: 100%;
-    height: calc(100% + 25px);
-}
-
-.a,
-.box {
-    position: absolute;
-    left: 20%;
-    top: 0;
-    height: 170px;
-    width: 240px;
-    border-radius: 2px;
-    background-color: white;
-    border: 1px solid black;
-}
-
-.box:hover {
-    cursor: pointer;
-}
-
-.box:hover > p {
-    text-decoration: underline;
-    transition: 0.1s;
-}
-
-p {}
-
-.text {
-    text-align: center;
-    font-family: "sandoll-jebi2", sans-serif;
-    font-weight: 500;
-    line-height: 15px;
-    position: absolute;
-    width: 200px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.dscren,
-.dscrkr {
-    margin: 0 20px;
-}
-
-.indent {
-    text-indent: 20px;
-}
-
-.para-space {
-    margin-top: 10px;
-}
-
-.date {
-    position: absolute;
-    font-family: "sandoll-jebi2", sans-serif;
-    font-weight: 500;
-    font-size: 17px;
-    text-align: center;
-    z-index: 5;
-    top: 620px;
-    line-height: 27px;
-}
-
-.content-row {
-    position: absolute;
-    display: flex;
-    max-width: 830px;
-}
-
-#box {
-    transition: width 0.3s;
-}
-
-.list-1,
-.list-2,
-.list-3 {
-    position: absolute;
-    width: 830px;
-    background-color: white;
-    border: 1px solid black;
-}
-
-.list-3 {
-    height: 10px;
-    top: 900px;
-}
-
-.list-2 {
-    height: 40px;
-    top: 920px;
-}
-
-.list-1 {
-    height: 80px;
-    top: 970px;
-}
-
-.footer {
-    position: absolute;
-    bottom: 10px;
-    font-family: "sandoll-jebi2", sans-serif;
-    font-weight: 500;
-    font-size: 17px;
-}
-
-#wrap {
-    display: inline-block;
-    /* 자식 요소를 감싸기 위해 인라인 블록 사용 */
-    text-align: center;
-    /* 내부 텍스트의 기본 정렬 */
-    position: relative;
-    width: 100%;
-}
-
-.list-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.list {
-    top: 950px;
+.maintxt-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.maintxt1, .maintxt2 {
+    width: 60vw;
+    padding: 40px;
+    margin-bottom: 50px;
+    background-color: white;
+    border: 1px solid black;
+    box-sizing: border-box;
+    line-height: 23px;
+}
+
+.maintxt1 p, .maintxt2 p {
+    font-family: "sandoll-jebi2", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    margin: 10px 0; /* 상하 간격 조정 */
+    text-align: left; /* 텍스트를 가운데 정렬 */
+}
+
+.download_button {
+    padding: 10px;
+    width: 125px;
+    right: 40px;
+    margin-top: 30px;    
+    border-radius: 20px;
+    border: 1px solid black;
+    background-color: white;
+    font-family: "sandoll-jebi2", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: black;
+}
+
+.download_button a {
+    transition: 0.3s;
+}
+
+.download_button:hover{
+    background-color: black;
+}
+
+.download_button:hover a{
+    color: white;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.gallery {
+    width: 60vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2열로 제한 */
+    gap: 10px; /* 이미지 간 간격 */
+    background-color: white; /* 배경색 설정 */
+    border: 1px solid black; /* 테두리 설정 */
+    box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
+    padding: 10px; /* 갤러리 내부 여백 */
+}
+
+.gallery img, .gallery video {
+    width: 100%;
+    height: auto; /* 이미지 비율을 유지하면서 높이를 자동으로 조절 */
+    object-fit: contain; /* 이미지가 잘리지 않고 컨테이너에 맞춤 */
+    box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 830px;
-    height: 900px;
-    margin: 0 auto;
+    margin-top: 20px;
     padding: 80px 0;
     background-color: white;
     border: 1px solid black;
-    position: relative;
+    box-sizing: border-box;
     text-align: left;
 }
 
@@ -417,85 +260,14 @@ p {}
     opacity: 1;
 }
 
-.list a.empty {
-    height: 10px;
-    pointer-events: none;
-}
-
 footer {
     width: 100%;
-    bottom: 0px;
-    position: absolute;
-}
-
-footer p {
+    text-align: center;
     padding: 30px;
     font-family: "sandoll-jebi2", sans-serif;
     font-weight: 300;
     font-size: 11px;
-    text-align: center;
-}
-
-.list .item {
-    padding: 10px 0 10px 15px;
-    width: 80%;
-    box-sizing: border-box;
-    border-top: 1px solid black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.list .item:last-child {
-    border-bottom: 1px solid black;
-}
-
-.gallery-container {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center; /* 수평 중앙 정렬 */
-}
-
-.gallery {
-    position: relative;
-    width: 60vw;
-    top: 750px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2열로 제한 */
-    gap: 10px; /* 이미지 간 간격 */
-    background-color: white; /* 배경색 설정 */
-    border: 1px solid black; /* 테두리 설정 */
-    box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
-    padding: 10px; /* 갤러리 내부 여백 */
-}
-
-.gallery img, .gallery video {
-    width: 100%;
-    height: auto; /* 이미지 비율을 유지하면서 높이를 자동으로 조절 */
-    object-fit: contain; /* 이미지가 잘리지 않고 컨테이너에 맞춤 */
-    box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
-}
-
-.dsc img {
-    width: 10%;
-    height: auto;
-}
-.dsc-txt {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-direction: row;
-    flex: 3;
-    line-height: 22px;
-}
-
-.dsc-text p {
-    font-family: "sandoll-jebi2", sans-serif;
-    font-weight: 500;
-    font-size: 17px;
-    margin: 10px 0; /* 상하 간격 조정 */
-    text-align: left; /* 텍스트를 왼쪽 맞춤 */
+    background-color: rgba(160, 255, 40, 1);
 }
 
 .dsc-img {
@@ -503,5 +275,33 @@ footer p {
     align-self: flex-start; /* 이미지가 상단에 정렬되도록 설정 */
     max-width: 400px; /* 이미지 최대 너비 설정 */
     height: auto;
-    padding: 0 20px 0 50px;
+    margin: 10px 0;
+    margin: 10px 10px 10px 100px;
+    border: 1px solid black;
+}
+
+.dsc-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex: 3;
+    line-height: 22px;
+    padding-left: 10px;
+}
+
+#box {
+    transition: width 0.3s;
+}
+
+.maintxt2 ul {
+    font-family: "sandoll-jebi2", sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    text-align: left; /* 텍스트를 가운데 정렬 */
+    margin: 30px 0 30px 20px;
+}
+
+ul li {
+    background-color: rgba(255,255,0,0.5);
 }
