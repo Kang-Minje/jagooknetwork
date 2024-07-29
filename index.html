@@ -177,10 +177,25 @@
 
 
         </div>
+        <div class="guestbook">
+            <form id="guestBookForm">
+                <h1>Guest Book</h1>
+                <input type="text" id="name" placeholder="Your name" required>
+                <textarea id="message" placeholder="Your message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="messagesContainer">
+                <h2>Messages</h2>
+                <ul id="messagesList"></ul>
+            </div>
+        </div>
+        <script src="/js/guestbook.js"></script>
         <footer>
             <p>&copy; 2024 강민제.</p>
         </footer>
     </div>
+
+
 
 </body>
 
